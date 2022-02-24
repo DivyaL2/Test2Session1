@@ -1,4 +1,5 @@
 #include<stdio.h>
+#include<math.h>
 int input_array_size()
 {
   int n;
@@ -27,7 +28,7 @@ void erotosthenes_sieve(int n, int a[n])
     }
   }  
 }
-void out_put(int n, int a[n]);
+void out_put(int n, int a[n])
 {
   for(int i=0;i<n;i++)
     {
