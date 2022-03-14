@@ -8,17 +8,14 @@ void input_string(char *a)
 
 
 
-char string_ncmp(char *s1,char *s2)
+int string_ncmp(char *s1,char *s2)
 {  
   
-  for(int i=0;s1[i]==s2[i] && s1[i]!='\0';i++)
+  for(int i=0;(s1[i]==s2[i] && s1[i]!='\0');i++)
   {
-   if(s1[i]!=s2[i])
-     return 1;
-  }
-  
- }  
-
+    return (s1[i]-s2[i]);
+  }  
+}
 
 char string_index(char *s, char *subs)
 {
@@ -35,8 +32,7 @@ void output(char *substring, char *string, int index)
 {  
   if(index)
   printf("the index of %s in %s is %d ",substring,string,index);
-  else
-    printf("substring does not exist");
+  
 }
 int main()
 {
